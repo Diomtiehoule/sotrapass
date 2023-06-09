@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 5% 0.5% 5%;
+}
+header h1{
+    color: #7DB978;
+}
+header i{
+    color: white;
+    padding-right: 0.%;
+}
+header nav ul{
+    display : flex;
+    gap: 20px;
+    list-style: none;
+    text-decoration: none;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+header nav ul li:hover{
+    color: #7DB978;
+}
