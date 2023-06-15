@@ -1,10 +1,12 @@
-import React, { useState ,  useRef, useContext } from 'react';
-import './css/register.css';  
-import { addDoc, createUserWithEmailAndPassword, userCollection } from '../assets/DB/firebase';
-import { auth } from '../assets/DB/firebase';
+import React, {useRef} from 'react';
+import './css/register.css';
+import {}
+import {auth,createUserWithEmailAndPassword} from '../assets/DB/firebase';
+import swal from 'sweetalert'
 
 // composant comportant le formulaire et l'inscription des utilisateurs
 function register() {
+    
     
 
      const signUp = (email , password) => createUserWithEmailAndPassword(auth , email, password);
@@ -36,17 +38,22 @@ function register() {
                 inputs.current[2].value
             )
             formRef.current.reset();
+            
+            
 
             console.log(cred)
         } catch (error) {
             console.log(error)
+            swal("Success!", "Inscription effectué avec success!", "success");
         }
     }
+
+    // envoyer mes information dans ma base de données firestore
+    
     
     return (
         <>
         {/* Formulaire d'incription des utilisateurs */}
-        <body>
         <div className="wrapper">
              <div className="form-box register">
                 <div className="icon-close"></div>
@@ -73,7 +80,7 @@ function register() {
                         <input type="checkbox" />J'accepte les conditions d'utilisation
                     </label>
                 </div>
-                <button type="submit" className="btn">Enregistrer</button>
+                <button type="submit" className="btn" onClick={generate}>Enregistrer</button>
                 <div className="login-register">
                     <p> Vous avez deja un compte ?<a href="./Login.jsx" className="login-link">Connexion</a></p>
                 </div>
@@ -82,7 +89,6 @@ function register() {
            
     </div>
     </div>
-        </body>
         
         </>
     );

@@ -2,11 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: white;
+    color: black;
 }
 
 body{
     background-color: black;
+}
+.message{
+    color: red;
+    font-size: .7rem;
 }
 .wrapper{
     width: 30%;
@@ -41,28 +45,6 @@ i{
     bottom: 10px;
     font-size: 1.2em;
 }
-.wrapper.active .form-box.login
-{
-    transition: none;
-    transform: translateX(-400px);
-}
-/* .wrapper .icon-close
-{
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 45px;
-    height: 45px;
-    background-color: #162938;
-    display: flex;
-    font-size:2em;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-    z-index: 1;
-} */
 .form-box h2
 {
     font-size: 1.1em;
@@ -112,7 +94,7 @@ i{
     color: black;
     font-weight: 500;
     margin: -15px 0 15px;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
 }
 

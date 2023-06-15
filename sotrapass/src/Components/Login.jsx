@@ -1,6 +1,8 @@
 import React, { useState ,  useRef, useContext } from 'react';
 import { signInWithEmailAndPassword } from '../assets/DB/firebase';
 import { auth } from '../assets/DB/firebase';
+import { Link , useNavigate
+ } from 'react-router-dom';
 
 import './css/login.css'
 
@@ -8,6 +10,8 @@ import './css/login.css'
 // composant comportant le formulaire et la connexion des utilisateurs
 function Login() {
 
+
+    const [validation , setValidation] = useState('');
     const signIn = (email , password) => signInWithEmailAndPassword(auth , email, password);
 
     console.log(signIn);
@@ -35,6 +39,7 @@ function Login() {
             
         } catch (error){
             console.log('oups, adresse mail ou password incorrect');
+            setValidation('Oups, adddresse mail ou mot de passe incorrect')
         }
     }
 
@@ -69,7 +74,7 @@ function Login() {
                 <div className="login-register">
                     <p>Vous n'avez pas de compte ?
                         
-                            <a href="./Register" className="register-link">S'enregistrer</a></p>
+                            <a href="./Register.jsx" className="register-link">S'enregistrer</a></p>
                         
                 </div>
 

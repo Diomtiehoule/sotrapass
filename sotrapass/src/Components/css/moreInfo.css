@@ -1,0 +1,280 @@
+body{
+    background-color: white;
+}
+header nav ul li:first-child{
+    color: #7DB978;
+}
+.main-image{
+    background-image: url('../../../media/plusInfo.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+}
+
+.main-image h1{
+    font-size: 3rem;
+    width: 50%;
+    padding-top : 5%;
+    color: white;
+    padding-left: 3%;
+    text-transform: uppercase;
+}
+
+.informations .a_savoir .container{
+    width: 20%;
+    font-size: 1.2rem;
+    padding-top: .7%;
+    height: 7vh;
+    margin: 0 auto;
+    margin-top: 7%;
+    text-align: center;
+    background-color: #7DB978;
+    text-transform: uppercase;
+}
+
+.informations .info{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    text-align: inline;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+span{
+    font-size: 3.5rem;
+    color: green;
+}
+
+.informations .infoLigne .containerLigne{
+    width: 20%;
+    height: 7vh;
+    margin: 0 auto;
+    padding-top: 1%;
+    font-size: 1.1rem;
+    text-align: center;
+    background-color: #7DB978;
+}
+
+.informations .infoLigne .listeLigne{
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+.informations .infoLigne .listeLigne .express , .informations .infoLigne .listeLigne .monbus{
+    width: 50%;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.informations .infoLigne .listeLigne .express .num , .informations  .infoLigne .listeLigne .monbus .num{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    padding-top: 35%;
+    color: white;
+}
+
+.informations .service .associe{
+    width: 30%;
+    height: 7vh;
+    background-color: #7DB978;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1%;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.informations .service .passes{
+
+    display: flex;
+    width: 80%;
+    height: 5vh;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 5%;  
+    text-align: center;
+    justify-content: center;
+    justify-content: space-between;
+    font-size: 2rem;
+
+}
+
+.informations .service .passes .passe{
+    color: white;
+    width: 100%;
+    background-color: black;
+    margin-right: 5%;
+    font-size: 1.5rem;
+}
+
+/* couleur des differents numero des ligne de la ligne express */
+
+.express1 .num{
+    background-color: #23CF2A;
+}
+
+.express2 .num{
+    background-color: #AD1A1A;
+}
+
+.express3 .num{
+    background-color: #FAF45A;
+}
+
+.express4 .num{
+    background-color: #7DB978;
+}
+
+.express5 .num{
+    background-color:#2F671B ;
+}
+
+.express6 .num{
+    background-color: #D133C1;
+}
+
+.express7 .num{
+    background-color: #8DBADB;
+}
+
+.express8 .num{
+    background-color: #133BA0;
+}
+
+.express1 .up, .express1 .under{
+    color: #23CF2A;
+    text-align: center;
+}
+.express2 .up, .express2 .under{
+    color: #AD1A1A;
+    text-align: center;
+}
+.express3 .up, .express3 .under{
+    color: #FAF45A;
+    text-align: center;
+}
+.express4 .up, .express4 .under{
+    color: #7DB978;
+    text-align: center;
+}
+.express5 .up, .express5 .under{
+    color: #2F671B;
+    text-align: center;
+}
+.express6 .up, .express6 .under{
+    color: #D133C1;
+    text-align: center;
+}
+.express7 .up, .express7 .under{
+    color: #8DBADB;
+    text-align: center;
+}
+.express8 .up, .express8 .under{
+    color: #133BA0;
+    text-align: center;
+}
+
+
+/* couleur des different bus  de la ligne monbus */
+
+.monbus1 .num{
+    background-color: #23CF2A;
+}
+
+.monbus2 .num{
+    background-color: #AD1A1A;
+}
+
+.monbus3 .num{
+    background-color: #FAF45A;
+}
+
+.monbus4 .num{
+    background-color: #7DB978;
+}
+
+.monbus5 .num{
+    background-color:#2F671B ;
+}
+
+.monbus6 .num{
+    background-color: #D133C1;
+}
+
+.monbus7 .num{
+    background-color: #8DBADB;
+}
+
+.monbus8 .num{
+    background-color: #133BA0;
+}
+.monbus9 .num{
+    background-color: #777777;
+}
+.monbus10 .num{
+    background-color: #700000;
+}
+.monbus11 .num{
+    background-color: #FF8D23;
+}
+.monbus12 .num{
+    background-color: #741D6B;
+}
+
+.monbus1 .up, .monbus1 .under{
+    color: #23CF2A;
+    text-align: center;
+}
+.monbus2 .up, .monbus2 .under{
+    color: #AD1A1A;
+    text-align: center;
+}
+.monbus3 .up, .monbus3 .under{
+    color: #FAF45A;
+    text-align: center;
+}
+.monbus4 .up, .monbus4 .under{
+    color: #7DB978;
+    text-align: center;
+}
+.monbus5 .up, .monbus5 .under{
+    color: #2F671B;
+    text-align: center;
+}
+.monbus6 .up, .monbus6 .under{
+    color: #D133C1;
+    text-align: center;
+}
+.monbus7 .up, .monbus7 .under{
+    color: #8DBADB;
+    text-align: center;
+}
+.monbus8 .up, .monbus8 .under{
+    color: #133BA0;
+    text-align: center;
+}
+.monbus9 .up, .monbus9 .under{
+    color: #777777;
+    text-align: center;
+}
+.monbus10 .up, .monbus10 .under{
+    color: #700000;
+    text-align: center;
+}
+.monbus11 .up, .monbus11 .under{
+    color: #FF8D23;
+    text-align: center;
+}
+.monbus12 .up, .monbus12 .under{
+    color: #741D6B;
+    text-align: center;
+}

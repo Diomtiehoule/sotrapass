@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Routes , Route} from 'react-router-dom';
+import { Routes , Route , useNavigate} from 'react-router-dom';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 // import './App.css'
@@ -8,15 +8,21 @@ import Login from './Components/Login'
 import Register from './Components/register'
 import Header from './Components/Header'
 import UserHeader from './Components/UserHeader'
+import CodeQRModal from './Components/CodeQRModal';
+import MoreInfo from './Components/MoreInfo';
+import Footer from './Components/Footer';
+
 
 
 function App() {
-  // const [count, setCount] = useState(0)
 
   return (
     <>
-    {/* <Register /> */}
-    <Login />
+    {/* < Footer /> */}
+    {/* <Login /> */}
+    {/* < MoreInfo /> */}
+    <Register />
+    {/* <CodeQRModal /> */}
     {/* <Routes>
       <Route path='/' element={< Home />} />
     </Routes> */}

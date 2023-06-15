@@ -1,0 +1,35 @@
+
+.contaier{
+    width: 90%;
+    height: 60%;
+    margin: 0 auto;
+    background-color: brown;
+}
+.formulaire{
+    background-color: burlywood;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 350px;
+    padding: 20px;
+    border-radius: 6px;
+}
+label{
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+input{
+    width: 308px;
+    font-size: 16px;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: transparent;
+}
+
+.qr_code{
+    padding: 25px;
+    width: fit-content;
+    /* display: none; */
+}

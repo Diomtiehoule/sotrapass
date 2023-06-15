@@ -1,10 +1,6 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 body{
-    background-color: white;
+    /* background-color: white; */
 }
 
 header{
@@ -15,10 +11,14 @@ header{
 }
 header h1{
     color: #7DB978;
+    font-weight: bolder;
 }
 header i{
     color: white;
     padding-right: 0.%;
+}
+header i:hover{
+    color: #7DB978;
 }
 header nav ul{
     display : flex;
@@ -27,6 +27,9 @@ header nav ul{
     text-decoration: none;
     font-size: 1.2em;
     cursor: pointer;
+}
+header nav ul li{
+    color: white;
 }
 header nav ul li:hover{
     color: #7DB978;

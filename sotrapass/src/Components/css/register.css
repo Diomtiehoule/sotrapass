@@ -1,11 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: black;
-}
+
 .input-box .icon
 {
     position: absolute;
@@ -73,12 +66,13 @@ body{
 
 .remember-forgot
 {
-    font-size: .9em;
+    display: flex;
+    justify-content: space-between;
+    font-size: .7em;
     color: black;
     font-weight: 500;
     margin: -15px 0 15px;
-    display: flex;
-    justify-content: space-between;
+   
 }
 
 .remember-forgot label input

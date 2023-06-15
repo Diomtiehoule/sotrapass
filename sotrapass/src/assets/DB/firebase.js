@@ -43,9 +43,9 @@ const db=getFirestore(app);
 const auth=getAuth(app);
 
 //mes collections
-const userCollection=collection(db, 'users')
+const userCollection=collection(db, 'Utilisateurs')
 
 
 
-export {db, auth, userCollection,createUserWithEmailAndPassword,addDoc,signInWithEmailAndPassword,getDocs,updateDoc, doc, getDoc}
+export {db, auth,createUserWithEmailAndPassword,addDoc,signInWithEmailAndPassword,getDocs,updateDoc, doc, getDoc , collection}
 
