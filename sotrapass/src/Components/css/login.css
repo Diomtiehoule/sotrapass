@@ -1,13 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    color: black;
-}
 
-body{
-    background-color: black;
-}
 .message{
     color: red;
     font-size: .7rem;
@@ -24,9 +15,9 @@ i{
 }
 .wrapper .form-box
 {
-    width: 100%;
+    width: 80%;
     padding: 40px;
-    background-color: white;
+    background-color: #7DB978;
     border-radius: 5px;
 }
 .wrapper .form-box.login
@@ -35,7 +26,7 @@ i{
     transform: translateX(0);
 }
 .wrapper .form-box.login h1{
-    color: #7DB978;
+    color: white;
     text-align: center;
 }
 .input-box .icon

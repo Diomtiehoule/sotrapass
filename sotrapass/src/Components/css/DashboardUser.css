@@ -1,0 +1,95 @@
+.headerDashboard{
+    width: 100%;
+    height: 9vh;
+    background-color: black;
+}
+.nameSotra{
+    color: #7DB978;
+    padding-left: 2%;
+    padding-top: .5%;
+}
+.barreLaterale{
+    position: absolute;
+    height: 87.4vh;
+    width: 13%;
+    background-color: black;
+}
+.userProfile .photoProfile{
+    width: 60%;
+    height: 15vh;
+    margin: 0 auto;
+    margin-top: 20%;
+    border-radius: 50%;
+    background-color: gray;
+}
+.nameUser{
+    text-align: center;
+    margin-bottom: 20%;
+}
+.menu{
+    cursor: pointer;
+}
+.menu .pMenu:hover , .signOut .pSignOut:hover{
+    padding-left: 5%;
+    color: #7DB978;
+    transition: .5s;
+}
+p{
+    color: white;
+}
+.signOut{
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    padding-left: 1%;
+}
+.rechargement h3{
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 5%;
+}
+.rechargement h4{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.rechargement .inputsRechargement{
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    gap: 15%;
+    align-items: center;
+}
+.rechargement .inputsRechargement label{
+    font-size: 1.2rem;
+}
+input
+{
+    width: 130%;
+    height: 5vh;
+    border-radius: 50px;
+    border: 1px solid black;
+    margin-bottom: 15%;
+    margin-top: 3%;
+    padding-left: 5%;
+}
+.submitRechargement{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+    margin-top: 3%;
+    padding-top: .4%;
+    width: 10%;
+    height: 5vh;
+    text-align: center;
+    background-color: #7DB978;
+    border-radius: 10px;
+    border: 1px solid;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}

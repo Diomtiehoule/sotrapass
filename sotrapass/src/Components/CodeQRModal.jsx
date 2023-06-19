@@ -1,60 +1,22 @@
 import React, { useState } from 'react';
 import '../Components/css/codeQR.css'
-import '../assets/other/qrcode.min.js';
-import code from '../assets/other/qrcode.min.js';
 import QRCode from "react-qr-code";
 
 function CodeQRModal() {
+    const [text , setText] = useState("vous  venez d'acheter votre ticket de bus sotra..");
 
-    const QR = (e) =>{
-        new QRcode()
-    }
-    const change =(e) =>{
-           
-        console.log('sa marche !!')
-    }
-    const [afficher , setAfficher] = useState(false)
-    const [text , setText] = useState('bonjour');
-
-    function Handlechange(e){
-        setText(e.target.value) 
+    function change(e){
+        console.log('sa marche')
     }
     return (
         <div className='container'>
-            < code />
-            <div>
+            <p className='retour'>Retour</p>
+            <div className='codeSpace'>
+            <h1>code QR</h1>
              <div className='codeQR'>< QRCode value= {text} /></div>
-                <p className='alert'></p>
+                <p className='text'>Veuillez faire scanner votre code QR. <br />Puis retirer votre ticket</p>
             </div>
-
-            <section className='formulaire'>
-                <div className="name">
-                <label htmlFor="">Renseigner votre numero de compte</label>
-            <input type="text" id='name'/>
-                </div>
-
-                <div className="ligne">
-                    <label htmlFor="">Vous voyagez avec quelle ligne ?</label>
-                    <select name="bus" id="ligneB">
-                        <option value="ligneSimple" id='ligneSimple'>Ligne simple</option>
-                        <option value="ligneExpress" id='ligneExpress'>Ligne Express</option>
-                    </select>
-                </div>
-
-                <div className="numBus">
-                    <label htmlFor="">Renseigner le nombre de ticket à acheter</label>
-                    <input type="text" id='numBus' value={text} onChange={(e)=>{
-                        {Handlechange(e
-                            
-                            
-                            
-                            )}
-                    }}/>
-                </div>
-
-                <button className='btn_submit' onClick={change}>Acheter mon ticket</button>
-                
-            </section>
+            <button className='terminer' onClick={change}>Terminer</button>
         </div>
     );
 }
