@@ -2,7 +2,7 @@ import React, {useEffect, useRef, useState} from 'react';
 import './css/register.css';
 import {addDoc, auth,createUserWithEmailAndPassword, getDocs, signInWithEmailAndPassword , userCollection} from '../assets/DB/firebase';
 import swal from 'sweetalert'
-import { Link
+import { Link ,
  } from 'react-router-dom';
 
 // composant comportant le formulaire , l'inscription des utilisateurs et la recuperation dans le firestore (base de données firebase)
@@ -56,7 +56,7 @@ function Register() {
     const [newpassWord , setNewPassword] = useState('')
     const userData = async()=>{
         addDoc(userCollection , {nom : newName , password:newpassWord , email:newMail});
-        console.log(addDoc)
+        console.log(addDoc);
     }
     
      const [users , setUsers] = useState([]);
@@ -74,7 +74,7 @@ function Register() {
         <>
         {/* Formulaire d'incription des utilisateurs */}
 
-        <div className="wrapper">
+        {/* <div className="wrapper">
              <div className="form-box register">
                 <div className="icon-close"></div>
                 <h1>MaSotra</h1>
@@ -102,13 +102,38 @@ function Register() {
                 </div>
                 <button type="submit" className="btn" onClick={userData}>Enregistrer</button>
                 <div className="login-register">
-                    <p> Vous avez deja un compte ?<a href="./Login.jsx" className="login-link">Connexion</a></p>
+                    <p> Vous avez deja un compte ?<Link to="/Login" className="login-link">Connexion</Link></p>
                 </div>
             </form>
 
            
     </div>
-    </div>
+    </div> */}
+
+<div className="form-container">
+	<p className="title">Enregistrement</p>
+	<form className="form"  ref={formRef} onSubmit={handleForm}>
+		<div className="input-group">
+			<label for="username">Nom d'utilisateur</label>
+			<input type="email" name="username" id="username" placeholder=""  ref = {addInput}/>
+		</div>
+		<div className="input-group">
+			<label for="password">Email</label>
+			<input type="password" name="password" id="password" placeholder="" ref = {addInput}/>
+            <div className="input-group">
+			<label for="username">Mot de passe</label>
+			<input type="email" name="username" id="username" placeholder=""  ref = {addInput}/>
+		</div>
+			<div className="forgot">
+				<a rel="noopener noreferrer" href="#">Mot de passe oublié ?</a>
+			</div>
+		</div>
+		<button className="sign">Connexion</button>
+	</form>
+	<p className="signup">Vous avez déjà un compte?
+		<Link to="/Login" className="">Connexion</Link>
+	</p>
+</div>
         
         </>
     );

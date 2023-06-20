@@ -1,0 +1,136 @@
+/* modificationToggle  */
+.modificationToggle{
+    position: absolute;
+    left: 35%;
+    top: 25%;
+    width: 40%;
+    height: 50vh;
+    background-color: gray;
+}
+.modifNom , .modifMail , .modifPassword{
+    padding-top: 5%;
+    padding-left: 2%;
+    margin-bottom: 5%;
+}
+
+
+.submitModif{
+    display: flex;
+    float: right;
+    padding-right: 5%;
+    gap: 5%
+    ;
+}
+.submitModif .annuler{
+    background-color: red;
+}
+.submitModif .valider{
+    background-color: #7DB978;
+}
+
+
+
+
+
+
+.headerDashboard{
+    width: 100%;
+    height: 9vh;
+    background-color: black;
+}
+.menu i{
+    color: white;
+}
+.menu i:hover{
+    color: #7DB978;
+}
+.nameSotra{
+    color: #7DB978;
+    padding-left: .5%;
+}
+.barreLaterale{
+    position: absolute;
+    height: 91vh;
+    width: 13%;
+    background-color: black;
+}
+.userProfile .photoProfile{
+    width: 60%;
+    height: 15vh;
+    margin: 0 auto;
+    margin-top: 20%;
+    border-radius: 50%;
+    background-color: gray;
+}
+.nameUser{
+    text-align: center;
+    margin-bottom: 20%;
+}
+.menu{
+    cursor: pointer;
+    padding-left: 5%;
+}
+.menu .pMenu:hover , .signOut .pSignOut:hover{
+    padding-left: 5%;
+    color: #7DB978;
+    transition: .5s;
+}
+.menu .pMenuP , .menu .pMenuP i{
+    padding-left: 5%;
+    color: #7DB978;
+}
+p{
+    color: white;
+}
+.signOut{
+    width: 100%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    padding-left: 5%;
+}
+
+
+.informationUsers{
+        position: absolute;
+        top: 15%;
+        left: 30%;
+    justify-content: center;
+    align-items: center;
+}
+.informationUsers p{
+    color: black;
+    font-size: 1.2rem;
+}
+.personnelle .modifier{
+    background-color: #7DB978;
+    padding-top: 1%;
+    text-align: center;
+    width: 20%;
+    height: 4vh;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.personnelle .border1 , .personnelle .border2{
+    width: 160%;
+    border: 1px solid black;
+}
+.personnelle .border2{
+    margin-bottom: 10%;
+}
+.supplementaire .border3{
+    width: 160%;
+    border: 1px solid black;
+}
+
+.supprimerCompte{
+    background-color: #7DB978;
+    text-align: center;
+    padding-top: .4%;
+    width: 35%;
+    height: 4vh;
+    border-radius: 10px;
+    border: none;
+}

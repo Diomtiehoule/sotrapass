@@ -19,7 +19,7 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
-import {getFirestore,collection,addDoc,getDocs,updateDoc, doc,getDoc} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
+import {getFirestore,collection,addDoc,getDocs,updateDoc, doc,getDoc , deleteDoc} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 import {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.21.0/firebase-auth.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-analytics.js";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -47,5 +47,5 @@ const userCollection=collection(db, 'users');
 
 
 
-export {db, auth,createUserWithEmailAndPassword,addDoc,signInWithEmailAndPassword,getDocs,updateDoc, doc, getDoc , collection , userCollection}
+export {db, auth,createUserWithEmailAndPassword,addDoc,signInWithEmailAndPassword,getDocs,updateDoc, doc, getDoc , collection , userCollection , deleteDoc}
 

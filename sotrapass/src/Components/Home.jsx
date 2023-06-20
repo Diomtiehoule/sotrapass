@@ -1,22 +1,39 @@
+import Footer from './Footer'
+import Header from './Header'
 import './css/home.css'
+import { Link } from 'react-router-dom'
 
 function Home(){
-    return (<>
-    <nav>
-        <ul>
-            <li>bon savoir</li>
-            <li>mon passe</li>
-          <a href=""><li>me connecter</li></a>  
-        </ul>
-    </nav>
+    return (
+    <>
+    < Header />
+    <img src="../media/main-image.jpg" alt="mon image" />
 
-    <h2>bonjour a tout le monde je suis le nouveau !!</h2>
-    <p>Votre application est en cours de preparation , veuillez prendre la peine de verifier la documentation. Vous y trouverez tout plein de truc qui pourront vous aider pour votre application</p>
+    <h4><i class="fa-solid fa-circle-info"></i> Info</h4>
 
-    <img src="../IMAGES/Logo_Insitut-sotra2.png" alt="mon image" />
+    <div className="info">
+        <p>Votre plateforme de paiment de ticket en ligne est maintenant disponible !</p>
+    </div>
 
-    
-    </> )
+    <div className="sytem">
+        <img src="../media/distributeur.jpg" alt="" />
+
+        <div className="text">
+
+        <p>La nouvelle bielleterie de la sotra : Rapididté et souplesse</p>
+
+<p>La billettique est un système informatisé d’achat de tickets qui permet de dématérialiser le circuit d’achat des tickets et de le sécuriser par la même occasion.</p>
+
+        </div>
+       
+    </div>
+
+
+
+
+    < Footer />
+    </>
+     )
 }
 
 export default Home

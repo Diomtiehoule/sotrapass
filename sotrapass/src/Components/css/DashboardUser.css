@@ -5,12 +5,11 @@
 }
 .nameSotra{
     color: #7DB978;
-    padding-left: 2%;
-    padding-top: .5%;
+    padding-left: .5%;
 }
 .barreLaterale{
     position: absolute;
-    height: 87.4vh;
+    height: 91vh;
     width: 13%;
     background-color: black;
 }
