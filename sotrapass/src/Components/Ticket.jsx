@@ -1,5 +1,6 @@
 import React from 'react';
 import './css/ticket.css'
+import { Link } from 'react-router-dom';
 
 function Ticket() {
     return (
@@ -20,13 +21,13 @@ function Ticket() {
 
                 <div className="allMenu">
                     <div className="menu">
-                        <p className='pMenuP'>Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></p>
+                        <p className='pMenuP'><Link to='/ticket'>Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenu'>Rechargement <i class="fa-solid fa-wallet"></i></p>
+                        <p className='pMenu'><Link to='/DashboardUser'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenu'>Paramètre <i class=" fa fa-thin fa-gear"></i></p>
+                        <p className='pMenu'><Link to="/Parametre">Paramètre <i class=" fa fa-thin fa-gear"></i></Link></p>
                     </div>
 
                     <div className="signOut">

@@ -7,7 +7,7 @@ function Home(){
     return (
     <>
     < Header />
-    <img src="../media/main-image.jpg" alt="mon image" />
+    <img src="../media/main-image.jpg" alt="mon image"  className='main-image'/>
 
     <h4><i class="fa-solid fa-circle-info"></i> Info</h4>
 

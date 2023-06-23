@@ -39,14 +39,30 @@ function Register() {
                 inputs.current[2].value
             )
             formRef.current.reset();
-            
-            
+        
+            console.log('inscription effectué')
 
-            console.log(cred)
+            swal("Success!", "Inscription effectué avec success!", "success");
         } catch (error) {
             console.log(error)
-            swal("Success!", "Inscription effectué avec success!", "success");
+            
         }
+
+        // code permettant de generer le matricule de l'utilisateur lors de son inscription
+        let matriculeID = ()=>{
+            return Math.floor((1 + Math.random())* 0x1000).toString(5).substring(1);
+        }
+       setNewMatricule(matriculeID)
+       console.log(newMatricule);
+
+    //    generer un compte pour l'utilisateur , solde de base a 0frs
+       let compte = () =>{
+          let solde = 0
+        return  Number(solde);
+       }
+       setNewCompte(compte)
+       console.log(newCompte);
+
     }
 
     // envoyer mes information dans ma base de données firestore
@@ -54,8 +70,13 @@ function Register() {
     const [newName , setNewname] = useState('');
     const [newMail , setNewMail] = useState('');
     const [newpassWord , setNewPassword] = useState('')
+    const [ newMatricule , setNewMatricule] = useState('');
+    const [newCompte , setNewCompte] = useState('');
+
+    
+
     const userData = async()=>{
-        addDoc(userCollection , {nom : newName , password:newpassWord , email:newMail});
+        addDoc(userCollection , {nom : newName , password:newpassWord , email:newMail , matricule : newMatricule , compte : newCompte});
         console.log(addDoc);
     }
     
@@ -74,7 +95,7 @@ function Register() {
         <>
         {/* Formulaire d'incription des utilisateurs */}
 
-        {/* <div className="wrapper">
+        <div className="wrapper">
              <div className="form-box register">
                 <div className="icon-close"></div>
                 <h1>MaSotra</h1>
@@ -108,32 +129,7 @@ function Register() {
 
            
     </div>
-    </div> */}
-
-<div className="form-container">
-	<p className="title">Enregistrement</p>
-	<form className="form"  ref={formRef} onSubmit={handleForm}>
-		<div className="input-group">
-			<label for="username">Nom d'utilisateur</label>
-			<input type="email" name="username" id="username" placeholder=""  ref = {addInput}/>
-		</div>
-		<div className="input-group">
-			<label for="password">Email</label>
-			<input type="password" name="password" id="password" placeholder="" ref = {addInput}/>
-            <div className="input-group">
-			<label for="username">Mot de passe</label>
-			<input type="email" name="username" id="username" placeholder=""  ref = {addInput}/>
-		</div>
-			<div className="forgot">
-				<a rel="noopener noreferrer" href="#">Mot de passe oublié ?</a>
-			</div>
-		</div>
-		<button className="sign">Connexion</button>
-	</form>
-	<p className="signup">Vous avez déjà un compte?
-		<Link to="/Login" className="">Connexion</Link>
-	</p>
-</div>
+    </div>
         
         </>
     );

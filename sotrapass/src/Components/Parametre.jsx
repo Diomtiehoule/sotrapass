@@ -11,7 +11,7 @@ function Parametre() {
         const userDoc = doc(db , 'users' , id);
         await deleteDoc(userDoc);
     }
-    console.log(deleteUser())
+    console.log(deleteUser());
     return (
         <>
 
@@ -31,13 +31,13 @@ function Parametre() {
 
                 <div className="allMenu">
                     <div className="menu">
-                        <p className='pMenu'>Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></p>
+                        <p className='pMenu'><Link to="/Ticket">Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenu'>Rechargement <i class="fa-solid fa-wallet"></i></p>
+                        <p className='pMenu'><Link to='/DashboardUser'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenuP'>Paramètre <i class=" fa fa-thin fa-gear"></i></p>
+                        <p className='pMenuP'><Link to='/Parametre'>Paramètre <i class=" fa fa-thin fa-gear"></i></Link></p>
                     </div>
 
                     <div className="signOut">
@@ -66,7 +66,7 @@ function Parametre() {
                     <p className="contact">Contact :</p>
                 </div>
 
-                    <button  className="supprimerCompte"> Supprimer compte</button>
+                    <button  className="supprimerCompte" onClick={deleteUser}> Supprimer compte</button>
                 
             </div>
         </>

@@ -32,6 +32,7 @@ function Login() {
         console.log(inputs)
 
 
+        
         // code permettant de tester la connexion d'un utilisateur a travers son email et son mot de passe , valider l'innscription ou renvoyer une erreur
         
         try {
@@ -70,7 +71,7 @@ function Login() {
 				<a rel="noopener noreferrer" href="#">Mot de passe oublié ?</a>
 			</div>
 		</div>
-		<button className="sign">Connexion</button>
+		<button className="sign"><Link to='/DashboardUser'>Connexion</Link></button>
 	</form>
 	<p className="signup">Vous n'avez pas de compte?
 		<Link to="/Register" className="">Enregistrer</Link>

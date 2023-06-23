@@ -70,7 +70,13 @@
     cursor: pointer;
     padding-left: 5%;
 }
-.menu .pMenu:hover , .signOut .pSignOut:hover{
+.menu .pMenu a{
+    color: white;
+}
+.menu .pMenuP a{
+    color: #7DB978;
+}
+.menu .pMenu a:hover , .signOut .pSignOut:hover{
     padding-left: 5%;
     color: #7DB978;
     transition: .5s;
