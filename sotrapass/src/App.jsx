@@ -21,11 +21,12 @@ function App() {
     <>
            <BrowserRouter>
              <Routes>
-               <Route path='/' element={<Dashboard />}/>
+               <Route path='/' element={<Home />}/>
+               <Route path='/dashboard/:id' element={<Dashboard />}/>
                 <Route path='/login'  element={< Login />}/>
                 <Route path='/register'  element={< Register />}/>
                 <Route path='/parametre/:id'  element={< Parametre />}/>
-                <Route path='/codeQRModal'  element={< CodeQRModal />}/>
+                <Route path='/codeQRModal/:id'  element={< CodeQRModal />}/>
                 <Route path='/moreInfo'  element={< MoreInfo />}/>
                 <Route path='/ticket/:id'  element={< Ticket />}/>
                 <Route path='/dashboardUser/:id'  element={< DashboardUser />}/>

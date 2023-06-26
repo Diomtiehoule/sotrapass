@@ -140,3 +140,9 @@ p{
     border-radius: 10px;
     border: none;
 }
+#userInfo{
+    color: black;
+}
+#userInfoName{
+    color: white;
+}

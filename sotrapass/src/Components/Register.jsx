@@ -15,6 +15,7 @@ function Register() {
     const [newpassWord , setNewPassword] = useState('')
     const [ newMatricule , setNewMatricule] = useState('');
     const [newCompte , setNewCompte] = useState('');
+   
 
      const signUp = (email , password) => createUserWithEmailAndPassword(auth , email, password);
 
@@ -32,6 +33,21 @@ function Register() {
     const handleForm = async (e) =>{
         e.preventDefault()
         console.log(inputs)
+
+        // code permettant de generer le matricule de l'utilisateur lors de son inscription
+     let matriculeID = ()=>{
+        return Number(Math.floor((3 + Math.random())* 0x1000).toString(3).substring(1));
+    }
+   setNewMatricule(matriculeID);
+   console.log(newMatricule);
+
+//    generer unn compte au utilisateur a leur inscription , a 0 par defaut
+   let compte = () =>{
+      let solde = 0
+    return  Number(solde);
+   }
+   setNewCompte(compte);
+   console.log(newCompte);
 
         if((inputs.current[2].value.length)<6){
             setValidationn('6 caractere min');
@@ -54,31 +70,22 @@ function Register() {
             
         }
 
-        // code permettant de generer le matricule de l'utilisateur lors de son inscription
-        let matriculeID = ()=>{
-            return Number(Math.floor((2 + Math.random())* 0x1000).toString(3).substring(1));
-        }
-       setNewMatricule(matriculeID);
-       console.log(newMatricule);
+       
+    
+       
 
-    //    generer unn compte au utilisateur a leur inscription , a 0 par defaut
-       let compte = () =>{
-          let solde = 0
-        return  Number(solde);
-       }
-       setNewCompte(compte);
-       console.log(newCompte);
+        
 
     }
 
-    
-
+     
     
 
     const userData = async()=>{
         addDoc(userCollection , {nom : newName , password:newpassWord , email:newMail , matricule : newMatricule , compte : newCompte});
         console.log(addDoc);
     }
+
     
      const [users , setUsers] = useState([]);
 
