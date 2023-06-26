@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react';
 import './css/register.css';
-import {addDoc, auth,createUserWithEmailAndPassword, getDocs, signInWithEmailAndPassword , userCollection} from '../assets/DB/firebase';
+import {addDoc, auth,createUserWithEmailAndPassword, getDocs, signInWithEmailAndPassword , userCollection, doc} from '../assets/DB/firebase';
 import swal from 'sweetalert'
 import { Link ,
  } from 'react-router-dom';
@@ -8,7 +8,13 @@ import { Link ,
 // composant comportant le formulaire , l'inscription des utilisateurs et la recuperation dans le firestore (base de données firebase)
 function Register() {
     
-    
+    // envoyer mes information dans ma base de données firestore
+
+    const [newName , setNewname] = useState('');
+    const [newMail , setNewMail] = useState('');
+    const [newpassWord , setNewPassword] = useState('')
+    const [ newMatricule , setNewMatricule] = useState('');
+    const [newCompte , setNewCompte] = useState('');
 
      const signUp = (email , password) => createUserWithEmailAndPassword(auth , email, password);
 
@@ -50,28 +56,22 @@ function Register() {
 
         // code permettant de generer le matricule de l'utilisateur lors de son inscription
         let matriculeID = ()=>{
-            return Math.floor((1 + Math.random())* 0x1000).toString(5).substring(1);
+            return Number(Math.floor((2 + Math.random())* 0x1000).toString(3).substring(1));
         }
-       setNewMatricule(matriculeID)
+       setNewMatricule(matriculeID);
        console.log(newMatricule);
 
-    //    generer un compte pour l'utilisateur , solde de base a 0frs
+    //    generer unn compte au utilisateur a leur inscription , a 0 par defaut
        let compte = () =>{
           let solde = 0
         return  Number(solde);
        }
-       setNewCompte(compte)
+       setNewCompte(compte);
        console.log(newCompte);
 
     }
 
-    // envoyer mes information dans ma base de données firestore
-
-    const [newName , setNewname] = useState('');
-    const [newMail , setNewMail] = useState('');
-    const [newpassWord , setNewPassword] = useState('')
-    const [ newMatricule , setNewMatricule] = useState('');
-    const [newCompte , setNewCompte] = useState('');
+    
 
     
 

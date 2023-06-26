@@ -4,6 +4,7 @@ import { doc , db , deleteDoc} from '../assets/DB/firebase';
 import{ Link } from 'react-router-dom';
 
 function Parametre() {
+    
 
     // function pour supprimer un utilisateur de la base de données
     

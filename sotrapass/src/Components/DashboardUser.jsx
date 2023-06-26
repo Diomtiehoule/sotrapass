@@ -1,45 +1,42 @@
-import React, { useState , useEffect, useRef} from 'react';
+import React, { useState , useEffect } from 'react';
 import './css/DashboardUser.css'
 import { getDocs , userCollection } from '../assets/DB/firebase';
 import { Link, useParams } from 'react-router-dom';
 
 function DashboardUser() {
 
+    let { id } = useParams();
+  console.log('ID:', id);
+
     // recuperer les document de notre  collections pour pouvoir les afficher 
-    const [ currentSection , setCurrentSection] = useState(1);
-    const [ currentSubSection , setCurrentSubSection] = useState(5);
-    const [userInfo , setUserInfo] = useState(null);
+    // const [ currentSection , setCurrentSection] = useState(1);
+    // const [ currentSubSection , setCurrentSubSection] = useState(5);
+    const [userInfo , setUserInfo] = useState({})
     const [ compte , setCompte] = useState(0);
     console.log(compte);
 
-
-    let id = useParams();
-    console.log('ID:', id);
-
-
-
-    async function getInfoUser(id){
-        try{
-            const querySnapshot = await getDocs(userCollection);
-            for(const doc of querySnapshot.docs){
-                const documentData = doc.data();
-                const documentID = doc.id;
-
-                if(id === document.id){
-                    setUserInfo(documentData);
-                }
-                console.log(documentData);
+    async function GetInfosUser(id) {
+        try {
+          const querySnapshot = await getDocs(userCollection);
+          for (const doc of querySnapshot.docs) {
+            const documentData = doc.data();
+            const documentId = doc.id;
+            if (id === documentId) {
+              setUserInfo(documentData);
+              console.log(userInfo)
             }
-            console.log('DashboardUser');
-            
-        }catch(err){
-            console.log("une erreur s'est produit lors de la recuperation des documents :" , err)
+          }
+          console.log("DashBoard");
+        } catch (error) {
+          console.error("Une erreur s'est produite lors de la récupération des documents :", error);
         }
-    }
+      }
+    
+      useEffect(() => {
+        GetInfosUser(id);
+      }, [id]);
 
-    useEffect(()=>{
-        getInfoUser(id);
-    },[id]);
+      console.log(userInfo)
 
     return (
         <>
@@ -53,7 +50,8 @@ function DashboardUser() {
 
                     </div>
                     <div className="nameUser">
-                        <p>User...</p>;
+                        {/* l'endroit ou je afficher le nom de l'utilisateur depuis la base de données */}
+                        <p>{userInfo.nom}</p>
                     </div>
                 </div>
 

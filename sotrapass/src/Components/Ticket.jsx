@@ -35,6 +35,11 @@ function Ticket() {
                     </div>
                 </div>
             </div>
+
+            <div className="ticket">
+                <h1>ACHTER UN TICKET DE BUS</h1>
+                
+            </div>
         </>
     );
 }
