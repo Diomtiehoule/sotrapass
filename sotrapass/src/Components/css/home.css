@@ -38,20 +38,19 @@ img.distributeurImage{
 
 
 .objectif {
-    margin-top: 5%;
+    margin-top: 7%;
+    margin-bottom: 5%;
     margin-left: 30%;
-    
-    /* display: inline; */
     gap: 20px;
   }
   .objectif h1{
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   
   .role1{
     background-color: #7DB978;
-    padding: 1%;
-    width: 20%;
+    padding: 2%;
+    width: 60%;
     font-size: 1.2rem;
   }
   .role2{
@@ -64,6 +63,21 @@ img.distributeurImage{
     background-color: #7DB978;
     padding: 1%;
     width: 20%;
+    font-size: 1.2rem;
+  }
+
+
+  .innovation{
+    margin-left: 30%;
+    margin-bottom: 5%;
+  }
+  .innovation h1{
+    font-size: 2rem;
+  }
+  .innovationSotra{
+    background-color: #7DB978;
+    padding: 2%;
+    width: 60%;
     font-size: 1.2rem;
   }
   

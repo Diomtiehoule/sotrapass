@@ -3,6 +3,7 @@ import Header from './Header'
 import './css/home.css'
 import logo1 from '../../media/main-image.jpg';
 import logo2 from '../../media/distributeur.jpg'
+import image from '../../media/guichet.webp'
 
 function Home(){
     return (
@@ -31,28 +32,31 @@ function Home(){
         </div>
 
         <div className="objectif">
-            <h1>A VOUS SERVIRA CE SYSTEME ?</h1>
+            <h1>A QUOI VOUS SERVIRA CE SYSTEME ?</h1>
             <div className="role1">
                 <p>
-                    Faciliter vos payement de ticket , partout ou vous allez et a tout moment
-                </p>
-            </div>
-            <br />
-            <div className="role2">
-                <p>
+                    Faciliter vos payement de ticket , partout ou vous allez et a tout moment.
+                    <br />
+                    <br/>
                 Le systeme de paiement a distance vous facilite les souci de portefeuille ainsi eviter  de vous faire voler votre argent ou votre carte par des personnes de mauvaises foi.
-                </p>
-            </div>
-            <br />
-            <div className="role3">
-                <p>
+                <br />
+                <br />
                 La SOTRA dans sa quete de satisfaire sa clientèle , met tout en ouvre pour son déplacement dans de bonne conditions
                 </p>
             </div>
        
     </div>
 
-    <div className="newLetter">
+    <div className="innovation">
+        <h1>L'innovation</h1>
+        <div className='innovationSotra'>
+            <p>
+                L'innovation estau coeur de tout et la sotra vise cela a travers son nouveau systeme de paiement de ticket. Le paiement a distance prendra le pas sur les paiement en physique.
+            </p>
+        </div>
+    </div>
+
+    {/* <div className="newLetter">
       <form className="form">
         <div className="form-group">
           <label for="email">Email</label>
@@ -64,7 +68,7 @@ function Home(){
         </div>
         <button className="form-submit-btn" type="submit">Soumettre</button>
       </form>
-    </div>
+    </div> */}
 
 
 
