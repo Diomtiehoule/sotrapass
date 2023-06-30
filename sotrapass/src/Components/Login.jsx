@@ -2,6 +2,7 @@ import React, { useState ,  useRef, useContext } from 'react';
 import {auth, signInWithEmailAndPassword, userCollection,getDocs} from '../assets/DB/firebase';
 import { Link, useNavigate} from 'react-router-dom';
 import './css/login.css'
+import swal from 'sweetalert';
 
 
 // composant comportant le formulaire et la connexion des utilisateurs
@@ -31,7 +32,11 @@ function Login() {
             navigate(`/DashboardUser/${userId}`);
         })
         .catch((e) => {
-          setError(true);
+          if(!userId){
+            swal("Vous n'avez pas de compte , veuillez vous enregistrer pour continuer !")
+          }else{
+            swal("Adress email ou mot de passe incorrect !")
+          }
         });
         
       };

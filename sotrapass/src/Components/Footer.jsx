@@ -1,12 +1,16 @@
 import React from 'react';
 import '../Components/css/footer.css'
+import logo3 from '../../media/sotra.png'
+import logo4 from '../../media/institutSotra.png'
+import logo5 from '../../media/sotraTourisme.png'
+import logo6 from '../../media/sotraIndustrie.png'
 
 function Footer() {
     return (
         <>
             <div className="footer">
                 <div className="footerTop">
-                    <img src="../../media/sotra.png" alt="" />
+                    <img src={logo3} alt="" className='logoSotra'/>
 
                     <div className="contactfooter">
 
@@ -44,19 +48,19 @@ function Footer() {
 
                 <div className="footerBottom">
                     <div className="sotra1">
-                        <img src="../../media/institutSotra.png" alt="" />
+                        <img src={logo4} alt="" />
                         <h3>institut sotra</h3>
                         <p>Zone industrielle yopougon Andokoi</p>
                     </div>
 
                     <div className="sotra2">
-                        <img src="../../media/sotraTourisme.png" alt="" />
+                        <img src={logo5} alt="" />
                         <h3>sotra tourisme</h3>
                         <p>Abidjan , marcory zone 4</p>
                     </div>
 
                     <div className="sotra3">
-                        <img src="../../media/sotraIndustrie.png" alt="" />
+                        <img src={logo6} alt="" />
                         <h3>sotra industrie</h3>
                         <p>Zone industrielle koumassi</p>
                     </div>

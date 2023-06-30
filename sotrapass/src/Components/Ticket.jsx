@@ -57,6 +57,7 @@ function Ticket() {
           e.preventDefault();
             // condition d'achat de ticket de bus monbus
             if(choix.monbus === 'monbus' && userInfo.compte < (monbus * ticket)){
+              swal("Votre solde est insuffisant, veuillez recharger votre compte !"); 
               console.log('votre solde est insuffisant');
             }else if(choix.monbus === 'monbus' && userInfo.compte >= (monbus * ticket)){
               const docUser = doc(db , 'users' , id);
@@ -69,6 +70,7 @@ function Ticket() {
 
             // condition d'achat de ticket de bus wibus
             if(choix.wibus === 'wibus' && userInfo.compte < (wibus * ticket)){
+              swal("Votre solde est insuffisant, veuillez recharger votre compte !");
               console.log('votre solde est insuffisant')
             }else if(choix.wibus === 'wibus' && userInfo.compte >= (wibus * ticket)){
               const docUser = doc(db , 'users' , id);
@@ -80,6 +82,7 @@ function Ticket() {
 
             // condition d'achat de ticket de bus express
             if(choix.express === 'express' && userInfo.compte < (express * ticket)){
+              swal("Votre solde est insuffisant, veuillez recharger votre compte !");
               console.log('votre  solde est insuffisant')
             }else if(choix.express === 'express' && userInfo.compte >= (express * ticket)){
               const docUser = doc(db , 'users' , id);
@@ -103,7 +106,7 @@ function Ticket() {
             <div className="barreLaterale">
                 <div className="userProfile">
                     <div className="photoProfile">
-
+                    {/* <i class="fa-solid fa-circle-user"></i> */}
                     </div>
                     <div className="nameUser">
                         <p id='userInfoName'>{userInfo.nom}</p>
