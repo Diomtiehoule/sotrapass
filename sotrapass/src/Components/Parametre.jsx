@@ -8,9 +8,7 @@ function Parametre() {
     let { id } = useParams();
     console.log('ID:', id);
   
-      // recuperer les document de notre  collections pour pouvoir les afficher 
-      // const [ currentSection , setCurrentSection] = useState(1);
-      // const [ currentSubSection , setCurrentSubSection] = useState(5);
+      // recuperer les document de notre  collections pour pouvoir les afficher
 
       const [userInfo , setUserInfo] = useState({})
       const [ compte , setCompte] = useState(0);
@@ -62,13 +60,13 @@ function Parametre() {
 
                 <div className="allMenu">
                     <div className="menu">
-                        <p className='pMenu'><Link to="/ticket/:id">Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
+                        <p className='pMenu'><Link to={`/ticket/${id}`}>Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenu'><Link to='/DashboardUser/:id'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
+                        <p className='pMenu'><Link to={`/DashboardUser/${id}`}>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenuP'><Link to='/Parametre/:id'>Paramètre <i class=" fa fa-thin fa-gear"></i></Link></p>
+                        <p className='pMenuP'><Link to={`/Parametre/${id}`}>Paramètre <i class=" fa fa-thin fa-gear"></i></Link></p>
                     </div>
 
                     <div className="signOut">

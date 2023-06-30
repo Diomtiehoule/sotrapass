@@ -63,7 +63,7 @@ function Ticket() {
               const newfield = {compte : userInfo.compte - (monbus * ticket)};
               updateDoc(docUser , newfield);
               swal(`vous avez été débité de ${monbus * ticket}Frcs , pour l'achat de ${ticket} ticket ${choix.monbus}`)
-              // navigate('/codeQRModal');
+              navigate(`/codeQRModal/${id}`);
             }
 
 
@@ -75,7 +75,7 @@ function Ticket() {
               const newfield = {compte : userInfo.compte - (wibus * ticket)};
               updateDoc(docUser , newfield);
               swal(`vous avez été débité de ${wibus * ticket}Frcs , pour l'achat de ${ticket} ticket ${choix.wibus}`)
-              // navigate('/codeQRModal');
+              navigate(`/codeQRModal/${id}`);
             }
 
             // condition d'achat de ticket de bus express
@@ -86,7 +86,7 @@ function Ticket() {
               const newfield = {compte : userInfo.compte - (express * ticket)};
               updateDoc(docUser , newfield);
               swal(`vous avez été débité de ${express * ticket}Frcs , pour l'achat de ${ticket} ticket ${choix.express}`)
-              // navigate('/codeQRModal/:id');
+              navigate(`/codeQRModal/${id}`);
             }
             
         
@@ -115,10 +115,10 @@ function Ticket() {
                         <p className='pMenuP'><Link to='/ticket/:id'>Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenu'><Link to='/DashboardUser/:id'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
+                        <p className='pMenu'><Link to={`/DashboardUser/${id}`}>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
                     </div>
                     <div className="menu">
-                    <Link to="/Parametre/:id"><p className='pMenu'>Paramètre <i class=" fa fa-thin fa-gear"></i></p></Link>
+                    <Link to={`/Parametre/${id}`}><p className='pMenu'>Paramètre <i class=" fa fa-thin fa-gear"></i></p></Link>
                     </div>
 
                     <div className="signOut">

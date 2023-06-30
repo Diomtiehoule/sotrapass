@@ -16,7 +16,6 @@ function DashboardUser() {
 
  async function updateUser(e){
   e.preventDefault();
-
   let date = Date()
   console.log(date)
     console.log('ca marche')
@@ -26,7 +25,7 @@ function DashboardUser() {
     swal("Rechargement !", `Vous avez rechargé votre compte de  ${montant}Frcs,
     le ${date},
     via le numero ( +225 ${numero}).
-    Votre solde est maintenant de ${userInfo.compte}Frcs.`, "success");
+    Votre solde est maintenant de ${userInfo.compte + Number(montant)}Frcs.`, "success");
   }
 
     async function GetInfosUser(id) {
@@ -72,13 +71,13 @@ function DashboardUser() {
 
                 <div className="allMenu">
                     <div className="menu">
-                        <p className='pMenu'><Link to="/Ticket/:id">Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
+                        <p className='pMenu'><Link to={`/Ticket/${id}`}>Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenuP'><Link to='/DasboardUser/:id'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
+                        <p className='pMenuP'><Link to={`/DasboardUser/${id}`}>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
                     </div>
                     <div className="menu">
-                    <Link to='/Parametre/:id'><p className='pMenu'>Paramètre <i class=" fa fa-thin fa-gear"></i></p></Link>
+                    <Link to={`/Parametre/${id}`}><p className='pMenu'>Paramètre <i class=" fa fa-thin fa-gear"></i></p></Link>
                     </div>
 
                     <div className="signOut">

@@ -23,7 +23,7 @@ function Login() {
 
       const handleLogin = async (e) => {
         e.preventDefault();
-        const userId = await recupereDocumentId(userCollection, formLogin.email, formLogin.password)
+        const userId = await recupereDocumentId(userCollection, formLogin.email, formLogin.password);
     
         signInWithEmailAndPassword(auth, formLogin.email, formLogin.password)
         .then((userCredential) => {
