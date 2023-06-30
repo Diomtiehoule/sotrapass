@@ -12,7 +12,7 @@
     font-size: 1.2rem;
     color: black;
 }
-.container h1{
+.container .code{
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;

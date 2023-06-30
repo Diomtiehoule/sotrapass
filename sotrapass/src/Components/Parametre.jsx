@@ -1,6 +1,6 @@
 import React , {useState , useEffect }from 'react';
 import './css/Parametre.css'
-import { doc , deleteDoc , userCollection , getDocs , db} from '../assets/DB/firebase';
+import { userCollection , getDocs} from '../assets/DB/firebase';
 import{ Link , useParams} from 'react-router-dom';
 
 function Parametre() {
@@ -11,6 +11,7 @@ function Parametre() {
       // recuperer les document de notre  collections pour pouvoir les afficher 
       // const [ currentSection , setCurrentSection] = useState(1);
       // const [ currentSubSection , setCurrentSubSection] = useState(5);
+
       const [userInfo , setUserInfo] = useState({})
       const [ compte , setCompte] = useState(0);
       console.log(compte);
@@ -46,7 +47,7 @@ function Parametre() {
         <>
 
             <div className='headerDashboard'>
-                <h1 className='nameSotra'>MaSotra</h1>
+                <Link to="/"><h1 className='nameSotra'>MaSotra</h1></Link>
             </div>
 
             <div className="barreLaterale">
@@ -61,17 +62,17 @@ function Parametre() {
 
                 <div className="allMenu">
                     <div className="menu">
-                        <p className='pMenu'><Link to="/Ticket">Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
+                        <p className='pMenu'><Link to="/ticket/:id">Se déplacer <i class="fa-sharp fa-solid fa-ticket"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenu'><Link to='/DashboardUser'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
+                        <p className='pMenu'><Link to='/DashboardUser/:id'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenuP'><Link to='/Parametre'>Paramètre <i class=" fa fa-thin fa-gear"></i></Link></p>
+                        <p className='pMenuP'><Link to='/Parametre/:id'>Paramètre <i class=" fa fa-thin fa-gear"></i></Link></p>
                     </div>
 
                     <div className="signOut">
-                        <p className='pSignOut'>Déconnexion <i class="fa-solid fa-right-from-bracket"></i></p>
+                        <Link to='/'><p className='pSignOut'>Déconnexion <i class="fa-solid fa-right-from-bracket"></i></p></Link>
                     </div>
                 </div>
             </div>
@@ -92,7 +93,7 @@ function Parametre() {
                     <h1>Information supplementaire</h1>
                     <div className="border3"></div>
                     <p className='infoDate' id='userInfo'>Date inscription : {userInfo.date}</p>
-                    <p className="sexe" id='userInfo'>Sexe : {userInfo.sexe}</p>
+                    <p className="sexe" id='userInfo'>Matricule : STRA{userInfo.matricule}</p>
                     <p className="contact" id='userInfo'>Contact : {userInfo.contact}</p>
                 </div>
 

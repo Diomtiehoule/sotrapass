@@ -13,11 +13,11 @@ function CodeQRModal() {
         <div className='container'>
             <p className='retour'>Retour</p>
             <div className='codeSpace'>
-            <h1>code QR</h1>
+            <h1 className='code'>code QR</h1>
              <div className='codeQR'>< QRCode value= {text} /></div>
                 <p className='text'>Veuillez faire scanner votre code QR. <br />Puis retirer votre ticket</p>
             </div>
-            <button className='terminer' onClick={change} ><Link to='/ticket'>Terminer</Link></button>
+            <button className='terminer' onClick={change} ><Link to='/ticket/:id'>Terminer</Link></button>
         </div>
     );
 }

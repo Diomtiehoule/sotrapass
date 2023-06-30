@@ -2,32 +2,32 @@ import React, { useState , useEffect } from 'react';
 import './css/DashboardUser.css'
 import { getDocs , userCollection , updateDoc , doc, db } from '../assets/DB/firebase';
 import { Link, useParams } from 'react-router-dom';
+import swal from 'sweetalert';
 
 function DashboardUser() {
 
-
+   // recuperer les document de notre  collections pour pouvoir les afficher 
+   const [userInfo , setUserInfo] = useState({})
+   const [ montant , setMontant] = useState(0);
+   const [ numero , setNumero] = useState(0);
+   
   let { id } = useParams();
-  console.log('ID:', id); 
+  console.log('ID:', id);
 
+ async function updateUser(e){
+  e.preventDefault();
 
-  // mettre a jour la valeur du compte de l'utilisateur lors de son rechargement
-   async function  updateUser(e){
-    e.preventDefault()
-    console.log(montant)
-console.log('ca marche')
-const docUser = doc(db , 'users' , id);
-      const newfield = {compte : userInfo.compte + Number(montant)};
-      await updateDoc(docUser , newfield);
-    
+  let date = Date()
+  console.log(date)
+    console.log('ca marche')
+    const docUser = doc(db , 'users' , id);
+    const newfield = {compte : userInfo.compte + Number(montant)};
+    await updateDoc(docUser , newfield);
+    swal("Rechargement !", `Vous avez rechargé votre compte de  ${montant}Frcs,
+    le ${date},
+    via le numero ( +225 ${numero}).
+    Votre solde est maintenant de ${userInfo.compte}Frcs.`, "success");
   }
-
-
-    // recuperer les document de notre  collections pour pouvoir les afficher 
-    // const [ currentSection , setCurrentSection] = useState(1);
-    // const [ currentSubSection , setCurrentSubSection] = useState(5);
-    const [userInfo , setUserInfo] = useState({})
-    const [ montant , setMontant] = useState(0);
-    console.log(montant);
 
     async function GetInfosUser(id) {
         try {
@@ -57,7 +57,7 @@ const docUser = doc(db , 'users' , id);
     return (
         <>
             <div className='headerDashboard'>
-                <h1 className='nameSotra'>MaSotra</h1>
+                <Link to="/"><h1 className='nameSotra'>MaSotra</h1></Link>
             </div>
 
             <div className="barreLaterale">
@@ -66,7 +66,6 @@ const docUser = doc(db , 'users' , id);
 
                     </div>
                     <div className="nameUser">
-                        {/* l'endroit ou je afficher le nom de l'utilisateur depuis la base de données */}
                         <p>{userInfo.nom}</p>
                     </div>
                 </div>
@@ -79,11 +78,11 @@ const docUser = doc(db , 'users' , id);
                         <p className='pMenuP'><Link to='/DasboardUser/:id'>Rechargement <i class="fa-solid fa-wallet"></i></Link></p>
                     </div>
                     <div className="menu">
-                        <p className='pMenu'><Link to='/Parametre/:id'>Paramètre <i class=" fa fa-thin fa-gear"></i></Link></p>
+                    <Link to='/Parametre/:id'><p className='pMenu'>Paramètre <i class=" fa fa-thin fa-gear"></i></p></Link>
                     </div>
 
                     <div className="signOut">
-                        <p className='pSignOut'>Déconnexion</p>
+                        <Link to="/"><p className='pSignOut'>Déconnexion <i class="fa-solid fa-right-from-bracket"></i></p></Link>
                     </div>
                 </div>
             </div>
@@ -91,7 +90,7 @@ const docUser = doc(db , 'users' , id);
             <div className="rechargement">
                 <h3>Recharger votre compte</h3>
 
-                <h4>Matricule client : {userInfo.compte}</h4>
+                <h4>Matricule client : STRA{userInfo.matricule}</h4>
 
                 <form action="" onSubmit={updateUser}>
                 <div className="inputsRechargement">
@@ -99,24 +98,26 @@ const docUser = doc(db , 'users' , id);
                     <label htmlFor="">Nom :</label><br />
                     <input type="text"
                     className='nomUser'
-                    
-                    placeholder='Nom...' />
+                    placeholder='Nom...'
+                    required='required' />
                     </div>
                     
                     <div className="prenom">
                     <label htmlFor="">Prenom :</label><br />
                     <input type="text"
                     className='prenom'
-                    
-                    placeholder='Prenom...' />
+                    placeholder='Prenom...'
+                    required='required' />
                     </div>
                     
                     <div className="compte">
                     <label htmlFor="">numero de compte :</label><br />
                     <input type="tel"
                     className='tel'
-                    
-                    placeholder='00-00-00-00-00' />
+                    placeholder='00-00-00-00-00'
+                    onChange={(e)=>{setNumero(e.target.value)}}
+                    required='required'
+                    maxLength={10} />
                     </div>
                    
                    <div className="number">
@@ -124,7 +125,7 @@ const docUser = doc(db , 'users' , id);
                     <input type="number"
                     className='number'
                     placeholder='xxxFRCS'
-                    
+                    required='required'
                     onChange={(e)=>{
                         setMontant(e.target.value);
                     }}

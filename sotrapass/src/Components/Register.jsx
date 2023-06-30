@@ -20,7 +20,7 @@ function Register() {
      const signUp = (email , password) => createUserWithEmailAndPassword(auth , email, password);
 
 
-    console.log(signUp)
+    console.log(signUp);
 
     const inputs = useRef([]);
     const addInput = el =>{
@@ -69,18 +69,9 @@ function Register() {
             console.log(error)
             
         }
-
-       
-    
-       
-
-        
-
     }
 
      
-    
-
     const userData = async()=>{
         addDoc(userCollection , {nom : newName , password:newpassWord , email:newMail , matricule : newMatricule , compte : newCompte});
         console.log(addDoc);
@@ -102,41 +93,32 @@ function Register() {
         <>
         {/* Formulaire d'incription des utilisateurs */}
 
-        <div className="wrapper">
-             <div className="form-box register">
-                <div className="icon-close"></div>
-                <h1>MaSotra</h1>
-            <h2>Enregistrement</h2>
-            <form action="#" ref={formRef}className='form_register' onSubmit={handleForm}>
-                <div className="input-box">
-                    <span className="icon"><i className="fa-solid fa-user"></i></span>
-                    <input type="text" required className="Username" ref = {addInput}  onChange={(event) =>{setNewname(event.target.value)}}/>
-                    <label>Nom d'utilisateur</label>
-                </div>
-                <div className="input-box">
-                    <span className="icon"><i className="fa-sharp fa-solid fa-envelope"></i></span>
-                    <input type="email" required className="email" ref = {addInput}  onChange={(event)=>{setNewMail(event.target.value)}}/>
-                    <label>Email</label>
-                </div>
-                <div className="input-box">
-                    <span className="icon"><i className="fa-sharp fa-solid fa-lock"></i></span>
-                    <input type="password" required className="password" ref = {addInput}  onChange={(event)=>{setNewPassword(event.target.value)}}/>
-                    <label>Mot de passe</label>
-                </div>
-                <div className="remember-forgot">
-                    <label>
-                        <input type="checkbox" />J'accepte les conditions d'utilisation
-                    </label>
-                </div>
-                <button type="submit" className="btn" onClick={userData}>Enregistrer</button>
-                <div className="login-register">
-                    <p> Vous avez deja un compte ?<Link to="/Login" className="login-link">Connexion</Link></p>
-                </div>
-            </form>
+    <div className="form-container">
+  <p className="title">Enregistrement</p>
+  <form ref={formRef}className='form_register' onSubmit={handleForm}>
+  <div className="input-group">
+      <label for="username">Nom utilisateur</label>
+      <input type="text" required className="Username" ref = {addInput}  onChange={(event) =>{setNewname(event.target.value)}} />
+    </div>
+    <div className="input-group">
+      <label for="username">Email</label>
+      <input type="email" required className="email" ref = {addInput}  onChange={(event)=>{setNewMail(event.target.value)}} />
+    </div>
+    <div className="input-group">
+      <label for="password">Mot de passe</label>
+      <input type="password" required className="password" ref = {addInput}  onChange={(event)=>{setNewPassword(event.target.value)}} />
+      <div className="forgot">
+        <a rel="noopener noreferrer" href="#">Mot de passe oublié ?</a>
+      </div>
+    </div>
+    <button type="submit" className="btn" onClick={userData}>Enregistrer</button>
+  </form>
+  <p className="signup">Vous n'avez pas de compte?
+    <Link to="/Login" className="">Connexion</Link>
+  </p>
+</div>
 
-           
-    </div>
-    </div>
+    
         
         </>
     );

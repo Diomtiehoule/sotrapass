@@ -11,7 +11,7 @@ import Parametre from './Components/Parametre';
 import Register from './Components/Register';
 import Ticket from './Components/Ticket';
 import DashboardUser from './Components/DashboardUser'
-import Dashboard from './Components/Dashboard';
+
 
 
 
@@ -22,7 +22,7 @@ function App() {
            <BrowserRouter>
              <Routes>
                <Route path='/' element={<Home />}/>
-               <Route path='/dashboard/:id' element={<Dashboard />}/>
+               {/* <Route path='/dashboard/:id' element={<Dashboard />}/> */}
                 <Route path='/login'  element={< Login />}/>
                 <Route path='/register'  element={< Register />}/>
                 <Route path='/parametre/:id'  element={< Parametre />}/>

@@ -7,7 +7,7 @@ function Header() {
         <>
         <body>
         <header>
-            <h1>MaSotra</h1>
+            <Link to="/"><h1>MaSotra</h1></Link>
             <nav>
                 <ul>
                 <Link to='/MoreInfo'><li>Infos pratique</li></Link>

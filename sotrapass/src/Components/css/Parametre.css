@@ -1,13 +1,13 @@
 /* modificationToggle  */
-.modificationToggle{
+/* .modificationToggle{
     position: absolute;
     left: 35%;
     top: 25%;
     width: 40%;
     height: 50vh;
     background-color: gray;
-}
-.modifNom , .modifMail , .modifPassword{
+} */
+/* .modifNom , .modifMail , .modifPassword{
     padding-top: 5%;
     padding-left: 2%;
     margin-bottom: 5%;
@@ -26,7 +26,7 @@
 }
 .submitModif .valider{
     background-color: #7DB978;
-}
+} */
 
 
 
@@ -120,14 +120,14 @@ p{
     border-radius: 10px;
 }
 .personnelle .border1 , .personnelle .border2{
-    width: 160%;
+    width: 100%;
     border: 1px solid black;
 }
 .personnelle .border2{
     margin-bottom: 10%;
 }
 .supplementaire .border3{
-    width: 160%;
+    width: 100%;
     border: 1px solid black;
 }
 

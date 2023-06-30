@@ -28,8 +28,7 @@ function Login() {
         signInWithEmailAndPassword(auth, formLogin.email, formLogin.password)
         .then((userCredential) => {
             console.log("Logged in User ID:", userId);
-            navigate(`/Dashboard/${userId}`);
-            swal("Félicitation !", "Votre connexion a été effectuée avec succès !", "success");
+            navigate(`/DashboardUser/${userId}`);
         })
         .catch((e) => {
           setError(true);
