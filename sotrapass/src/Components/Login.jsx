@@ -29,14 +29,10 @@ function Login() {
         signInWithEmailAndPassword(auth, formLogin.email, formLogin.password)
         .then((userCredential) => {
             console.log("Logged in User ID:", userId);
-            navigate(`/DashboardUser/${userId}`);
+            navigate(`/ticket/${userId}`);
         })
         .catch((e) => {
-          if(!userId){
-            swal("Vous n'avez pas de compte , veuillez vous enregistrer pour continuer !")
-          }else{
-            swal("Adress email ou mot de passe incorrect !")
-          }
+          swal("Vous n'avez pas de compte , veuillez vous enregistrer pour continuer !")
         });
         
       };
