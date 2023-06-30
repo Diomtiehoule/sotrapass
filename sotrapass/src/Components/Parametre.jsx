@@ -95,7 +95,7 @@ function Parametre() {
                     <p className="contact" id='userInfo'>Contact : {userInfo.contact}</p>
                 </div>
 
-                    {/* <button  className="supprimerCompte"> Supprimer compte</button> */}
+                    <button  className="supprimerCompte"> Supprimer compte</button>
                 
             </div>
         </>
